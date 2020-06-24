@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LinY.UserMapper">
+   
+    <select id="getUserAll" resultType="com.waya.demo.pojo.UserBean">
+        SELECT * FROM `sys_users`
+    </select>
+    
+    <select id="findByUsername" parameterType="String" resultType="com.waya.demo.pojo.UserBean">
+        SELECT * FROM `sys_users`  WHERE loginName = #{username}
+    </select>
+
+</mapper>
